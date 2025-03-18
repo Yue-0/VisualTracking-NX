@@ -1,0 +1,14 @@
+margin: 10.0
+mlp_threshold: 0.6
+score_threshold: 0.35
+
+# Motion track
+beta: 0.001
+alpha: 0.002
+momentum: 100
+area_threshold: 1.5
+
+# Global retrieval
+retrieve_wait_time: 1.0
+retrieve_threshold: 0.8
+use_global_retrieval: 1  # 0: Disable, 1: Only SOT, 2: Always

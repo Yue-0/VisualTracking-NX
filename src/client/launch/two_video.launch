@@ -1,0 +1,30 @@
+<!-- Author: Yue Lin -->
+<launch>
+    <!-- Video path -->
+    <arg name="video1" />
+    <arg name="video2" />
+
+    <!-- Clients -->
+    <node name="client1" pkg="client" type="window.py" output="screen"
+          args="video $(arg video1) Window1" >
+        <param name="save" value="false" type="bool" />
+        <param name="mot1" value="/MOT/sot1" type="string" />
+        <param name="det1" value="/DET/sot1" type="string" />
+        <param name="mot" value="/MOT/frame1" type="string" />
+        <param name="sot" value="/SOT/frame1" type="string" />
+        <param name="det" value="/DET/frame1" type="string" />
+        <param name="box" value="/SOT/boxes1" type="string" />
+        <param name="res" value="/MOT/reset1" type="string" />
+    </node>
+    <node name="client2" pkg="client" type="window.py" output="screen"
+          args="video $(arg video2) Window2" >
+        <param name="save" value="false" type="bool" />
+        <param name="mot1" value="/MOT/sot2" type="string" />
+        <param name="det1" value="/DET/sot2" type="string" />
+        <param name="mot" value="/MOT/frame2" type="string" />
+        <param name="sot" value="/SOT/frame2" type="string" />
+        <param name="det" value="/DET/frame2" type="string" />
+        <param name="box" value="/SOT/boxes2" type="string" />
+        <param name="res" value="/MOT/reset2" type="string" />
+    </node>
+</launch>

@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include/**",
+                "${workspaceFolder}/**",
+                "/usr/local/cuda/include/",
+                "/opt/ros/noetic/include/**",
+                "${workspaceFolder}/devel/include/**",
+                "${workspaceFolder}/src/server/include/**"
+            ],
+            "defines": [],
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-arm64"
+        }
+    ],
+    "version": 4
+}

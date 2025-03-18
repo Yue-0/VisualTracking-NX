@@ -1,0 +1,21 @@
+<!-- Author: Yue Lin -->
+<launch>
+    <!-- Video path -->
+    <arg name="video" />
+
+    <!-- Whether to save results -->
+    <arg name="save" default="false" />
+
+    <!-- Client -->
+    <node name="client" pkg="client" type="window.py" output="screen"
+          args="video $(arg video) Tracking" >
+		<param name="mot1" value="/MOT/sot" type="string" />
+        <param name="det1" value="/DET/sot" type="string" />
+		<param name="save" value="$(arg save)" type="bool" />
+        <param name="mot" value="/MOT/frame" type="string" />
+        <param name="sot" value="/SOT/frame" type="string" />
+        <param name="det" value="/DET/frame" type="string" />
+        <param name="box" value="/SOT/boxes" type="string" />
+        <param name="res" value="/MOT/reset" type="string" />
+    </node>
+</launch>

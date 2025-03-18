@@ -1,0 +1,8 @@
+uint16 num
+uint32[] x
+uint32[] y
+uint32[] w
+uint32[] h
+sensor_msgs/Image image
+---
+float32 time

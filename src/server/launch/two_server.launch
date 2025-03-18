@@ -1,0 +1,35 @@
+<!-- Author: Yue Lin -->
+<launch>
+    <!-- Model path -->
+    <arg name="HiT1" default="$(find server)/models/HiT/HiT.trt" />
+    <arg name="HiT2" default="$(find server)/models/HiT/HiT.trt" />
+    <arg name="YOLO1" default="$(find server)/models/YOLO/YOLOv6s.trt" />
+    <arg name="YOLO2" default="$(find server)/models/YOLO/YOLOv6s.trt" />
+
+    <!-- Hyperparameters -->
+    <rosparam file="$(find server)/configs/sot.yaml" command="load" />
+    <rosparam file="$(find server)/configs/mot.yaml" command="load" />
+
+    <!-- Run Servers -->
+    <node name="server1" pkg="server" type="server" output="screen" 
+          args="$(arg HiT1) $(arg YOLO1)" >
+        <param name="mot_server" value="/MOT/frame1" type="string" />
+        <param name="sot_server" value="/SOT/frame1" type="string" />
+        <param name="det_server" value="/DET/frame1" type="string" />
+        <param name="box_server" value="/SOT/boxes1" type="string" />
+        <param name="reset_server" value="/MOT/reset1" type="string" />
+        <param name="sot_mot_server" value="/MOT/sot1" type="string" />
+        <param name="sot_det_server" value="/DET/sot1" type="string" />
+    </node>
+    <node name="server2" pkg="server" type="server" output="screen" 
+          args="$(arg HiT2) $(arg YOLO2)" >
+        <param name="mot_server" value="/MOT/frame2" type="string" />
+        <param name="sot_server" value="/SOT/frame2" type="string" />
+        <param name="det_server" value="/DET/frame2" type="string" />
+        <param name="box_server" value="/SOT/boxes2" type="string" />
+        <param name="reset_server" value="/MOT/reset2" type="string" />
+        <param name="sot_mot_server" value="/MOT/sot2" type="string" />
+        <param name="sot_det_server" value="/DET/sot2" type="string" />
+    </node>
+    <node name="point2box" pkg="server" type="point2box.py" output="screen" />
+</launch>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>server</name>
+  <version>0.0.0</version>
+  <description>The server package</description>
+
+  <maintainer email="lhchuan@dlut.edu.cn">Huchuan_Lu</maintainer>
+
+  <license>TODO</license>
+
+  <!-- <url type="webvsite">TODO</url> -->
+
+  <author email="yuelin@mail.dlut.edu.cn">Yue_Lin</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tracking_msgs</build_depend>
+  <build_depend>image_transport</build_depend>
+
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>std_srvs</build_export_depend>
+  <build_export_depend>cv_bridge</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>tracking_msgs</build_export_depend>
+  <build_export_depend>image_transport</build_export_depend>
+
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tracking_msgs</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+
+  <export></export>
+</package>

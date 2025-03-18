@@ -1,0 +1,14 @@
+sensor_msgs/Image image
+---
+uint32 x0
+uint32 y0
+uint32 w0
+uint32 h0
+uint32 occ
+uint32[] x
+uint32[] y
+uint32[] w
+uint32[] h
+uint32[] id
+int32[] cls
+float32 time

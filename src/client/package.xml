@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>client</name>
+  <version>0.0.0</version>
+  <description>The client package</description>
+
+  <maintainer email="lhchuan@dlut.edu.cn">Huchuan_Lu</maintainer>
+
+  <license>TODO</license>
+
+  <!-- <url type="webvsite">TODO</url> -->
+
+  <author email="yuelin@mail.dlut.edu.cn">Yue_Lin</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>rospy</build_depend>
+  
+  <build_export_depend>rospy</build_export_depend>
+  
+  <exec_depend>rospy</exec_depend>
+
+  <export></export>
+</package>

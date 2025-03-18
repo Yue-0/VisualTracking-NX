@@ -1,0 +1,9 @@
+# Network
+num_classes: 7
+infer_size: 480
+outputs_dim: 4725
+
+# Thresholds
+nms_threshold: 0.45
+match_threshold: 0.8
+detect_threshold: 0.5

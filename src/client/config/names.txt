@@ -1,0 +1,7 @@
+tank
+ORV
+person
+bus
+truck
+car
+UAV
